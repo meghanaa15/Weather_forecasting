@@ -1,10 +1,16 @@
 const input = document.getElementById('ipt');
 const button = document.getElementById('btn');
-const present = document.getElementById('current day');
+const present = document.getElementById('current-day');
 
 const API_KEY = "d481c0aeba3c80d66cb77ecf4f99d228";
 const cardids = ["demo1","demo2","demo3","demo4"];
 
+window.addEventListener("load", () => {
+setTimeout(() =>{
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("app").style.display = "block";
+},5000);
+});
 
 button.addEventListener("click",async()=>{
     const city = input.value.trim();
